@@ -1,0 +1,52 @@
+# AddressIQ: Cursor Rules
+
+## Source of truth
+- ADDRESSIQ_SPEC.md defines scope, architecture, rules, and milestones. Read the relevant sections before writing code.
+- Work on ONE milestone at a time. Do not implement features from later milestones.
+- If the spec is ambiguous or you need to deviate, stop and ask. Do not silently change the design.
+
+## Workflow
+1. Before coding, write a short plan: files to create/change, interfaces, tests.
+2. Make small, reviewable changes. Prefer several small diffs over one large one.
+3. Write tests alongside code. Code without tests is not done.
+4. After changes, run: `ruff check`, `mypy src`, `pytest`. Fix failures before moving on.
+5. Summarize what changed and what is left at the end of each task.
+
+## Code standards
+- Python 3.11. Type hints on all functions. Pydantic v2 models for all data crossing module boundaries.
+- Pure functions for normalizer, noise operators, and metrics. No hidden global state.
+- Every stochastic function accepts a `seed` or `random.Random` instance.
+- Configuration lives in `config/*.yaml`. No magic numbers or hard-coded thresholds in code.
+- All resolvers implement the `Resolver` protocol in `resolvers/base.py`. The benchmark runner must depend only on that interface.
+- Keep modules focused. Follow the folder structure in the spec.
+
+## Testing rules
+- Unit tests must not make network calls. Use cached fixtures in `tests/fixtures/`.
+- Normalizer and decision policy require table-driven tests (input, expected output, reason).
+- Golden tests for the normalizer live in `tests/golden/`. Do not edit expected outputs to make tests pass without explaining why.
+
+## Data and evaluation integrity (critical)
+- NEVER invent metrics, benchmark numbers, or results. Any number in docs must come from a saved run in `results/`.
+- NEVER leak test data: splits are by locality, fixed by seed, manifests stored in `data/splits/`.
+- Do not tune thresholds or prompts on the test split. Use validation only.
+- Cache all LLM calls on disk keyed by (model, prompt_version, input hash). Record cost and latency per call.
+- Record data sources and licenses. OSM data requires ODbL attribution.
+
+## LLM usage rules
+- Temperature 0. JSON schema enforced. Prompt files are versioned in `prompts/`.
+- The LLM must choose from a provided gazetteer shortlist; never let it invent localities or pincodes.
+- Validate every LLM output against the schema; on failure, retry once, then return a low-confidence result flagged `LLM_PARSE_ERROR`.
+
+## Security and hygiene
+- Never commit secrets. Use `.env` and keep `.env.example` updated.
+- `data/raw/` is gitignored; provide scripts to download it.
+- Do not add dependencies without stating why. Pin versions in `pyproject.toml`.
+
+## UI rules
+- Streamlit pages must read from saved results or the API; no heavy computation on page load.
+- Always show the reason for a routing decision next to the confidence score.
+- Use colorblind-safe colors for decision badges.
+
+## Documentation rules
+- Keep README claims honest: state that data is public and synthetic and that no Delhivery data was used.
+- Update `docs/model_card.md`, `docs/data_card.md`, and `docs/limitations.md` whenever behavior changes.

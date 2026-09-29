@@ -1,0 +1,30 @@
+# Virtual environment
+.venv/
+
+# Secrets
+.env
+.env.*
+
+# Raw data
+data/raw/
+
+# Model artifacts
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.onnx
+*.safetensors
+*.ckpt
+*.model
+models/
+
+# Tooling caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
