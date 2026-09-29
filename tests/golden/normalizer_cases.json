@@ -1,0 +1,74 @@
+[
+  {
+    "input": "H.No 12-3, Opp. SBI, Kukatpalli, Hyderabad 500072",
+    "text": "house no 12-3 opposite sbi kukatpalli hyderabad 500072",
+    "tokens": ["house", "no", "12-3", "opposite", "sbi", "kukatpalli", "hyderabad", "500072"],
+    "pincode": "500072"
+  },
+  {
+    "input": "Nr. Ganesh Temple, Madhapur",
+    "text": "near ganesh temple madhapur",
+    "tokens": ["near", "ganesh", "temple", "madhapur"],
+    "pincode": null
+  },
+  {
+    "input": "wahan pe near SBI bank, Abids",
+    "text": "near sbi bank abids",
+    "tokens": ["near", "sbi", "bank", "abids"],
+    "pincode": null
+  },
+  {
+    "input": "FLAT NO. 4, BLDG 2, RD NO 5, BANJARA HILLS, 500034",
+    "text": "flat no 4 building 2 road no 5 banjara hills 500034",
+    "tokens": ["flat", "no", "4", "building", "2", "road", "no", "5", "banjara", "hills", "500034"],
+    "pincode": "500034"
+  },
+  {
+    "input": "House Number 12, Secunderabad",
+    "text": "house no 12 secunderabad",
+    "tokens": ["house", "no", "12", "secunderabad"],
+    "pincode": null
+  },
+  {
+    "input": "House No १२, Secunderabad ५००००३",
+    "text": "house no 12 secunderabad 500003",
+    "tokens": ["house", "no", "12", "secunderabad", "500003"],
+    "pincode": "500003"
+  },
+  {
+    "input": "Ｈ．Ｎｏ １２",
+    "text": "house no 12",
+    "tokens": ["house", "no", "12"],
+    "pincode": null
+  },
+  {
+    "input": "Hydrabad",
+    "text": "hydrabad",
+    "tokens": ["hydrabad"],
+    "pincode": null
+  },
+  {
+    "input": "Abids 500001 or Secunderabad 500003",
+    "text": "abids 500001 or secunderabad 500003",
+    "tokens": ["abids", "500001", "or", "secunderabad", "500003"],
+    "pincode": null
+  },
+  {
+    "input": "please deliver near the big temple opp. SBI",
+    "text": "deliver near big temple opposite sbi",
+    "tokens": ["deliver", "near", "big", "temple", "opposite", "sbi"],
+    "pincode": null
+  },
+  {
+    "input": "Kukat\u200bpally",
+    "text": "kukatpally",
+    "tokens": ["kukatpally"],
+    "pincode": null
+  },
+  {
+    "input": "   ",
+    "text": "",
+    "tokens": [],
+    "pincode": null
+  }
+]

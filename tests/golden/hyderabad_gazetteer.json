@@ -1,0 +1,57 @@
+[
+  {
+    "locality_id": "hyderabad:abids",
+    "name": "Abids",
+    "aliases": ["abids"],
+    "city": "Hyderabad",
+    "district": "Hyderabad",
+    "state": "Telangana",
+    "pincodes": ["500001"],
+    "lat": null,
+    "lon": null
+  },
+  {
+    "locality_id": "hyderabad:kondapur",
+    "name": "Kondapur",
+    "aliases": ["kondapur"],
+    "city": "Hyderabad",
+    "district": null,
+    "state": "Telangana",
+    "pincodes": ["500084"],
+    "lat": 17.46,
+    "lon": 78.35
+  },
+  {
+    "locality_id": "hyderabad:kukatpally",
+    "name": "Kukatpally",
+    "aliases": ["kukatpalli", "kukatpally"],
+    "city": "Hyderabad",
+    "district": "Medchal-Malkajgiri",
+    "state": "Telangana",
+    "pincodes": ["500072", "500085"],
+    "lat": 17.4948,
+    "lon": 78.3996
+  },
+  {
+    "locality_id": "hyderabad:madhapur",
+    "name": "Madhapur",
+    "aliases": ["madha pur", "madhapur"],
+    "city": "Hyderabad",
+    "district": "Ranga Reddy",
+    "state": "Telangana",
+    "pincodes": ["500081"],
+    "lat": 17.4486,
+    "lon": 78.3908
+  },
+  {
+    "locality_id": "hyderabad:nizampet",
+    "name": "Nizampeta",
+    "aliases": ["nizampet", "nizampeta"],
+    "city": "Hyderabad",
+    "district": "Medchal-Malkajgiri",
+    "state": "Telangana",
+    "pincodes": ["500090"],
+    "lat": 17.515,
+    "lon": 78.382
+  }
+]

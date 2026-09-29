@@ -7,6 +7,7 @@
 
 # Raw data
 data/raw/
+all_india_pincode_directory_2025.csv
 
 # Model artifacts
 *.pkl
